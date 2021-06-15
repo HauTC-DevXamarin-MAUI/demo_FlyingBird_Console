@@ -1,0 +1,6 @@
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\BT_Class\bin\Debug\BT_Class.exe.config
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\BT_Class\bin\Debug\BT_Class.exe
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\BT_Class\bin\Debug\BT_Class.pdb
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\BT_Class\obj\Debug\BT_Class.csprojResolveAssemblyReference.cache
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\BT_Class\obj\Debug\BT_Class.exe
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\BT_Class\obj\Debug\BT_Class.pdb
