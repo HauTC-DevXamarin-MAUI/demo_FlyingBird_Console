@@ -31,19 +31,37 @@ namespace BT_Class
             set { minPoint = value; }
         }
 
+        public void XoaChim()
+        {
+            Point tempPoint = new Point(currentPoint);
+
+            Console.SetCursorPosition(tempPoint.X, tempPoint.Y);
+            Console.Write("   ");
+            tempPoint.Y++;
+            Console.SetCursorPosition(tempPoint.X, tempPoint.Y);
+            Console.Write("   ");
+            tempPoint.Y++;
+            Console.SetCursorPosition(tempPoint.X, tempPoint.Y);
+            Console.Write("   "); 
+        }
+
         public void VeChim(Point point)
         {
-            Console.Clear();
-            currentPoint = new Point(point);
+            if (currentPoint != null)
+                XoaChim();
 
+            currentPoint = new Point(point);
+            
             Console.SetCursorPosition(point.X, point.Y);
-            Console.WriteLine("===");
+            Console.Write("===");
             point.Y++;
             Console.SetCursorPosition(point.X, point.Y);
-            Console.WriteLine("===");
+            Console.Write("===");
             point.Y++;
             Console.SetCursorPosition(point.X, point.Y);
-            Console.WriteLine("==="); 
+            Console.Write("===");
+
+            Method.ReturnCurrsor(new Point(0,0));
         }
 
         public void Moverment(ConsoleKey key)
@@ -54,7 +72,7 @@ namespace BT_Class
             switch (key)
             {
                 case ConsoleKey.LeftArrow:
-                    if (--newPoint.X < minPoint.X)
+                    if (--newPoint.X < minPoint.X+1)
                     {
                         isMove = false;
                     }
@@ -64,7 +82,7 @@ namespace BT_Class
                     }                    
                     break;
                 case ConsoleKey.RightArrow:
-                     if (++newPoint.X  + birdWedth > maxPoint.X)
+                     if (++newPoint.X  + birdWedth > maxPoint.X-1)
                     {
                         isMove = false;
                     }
@@ -74,7 +92,7 @@ namespace BT_Class
                     }                    
                     break;
                 case ConsoleKey.UpArrow:
-                     if (--newPoint.Y < minPoint.Y)
+                     if (--newPoint.Y < minPoint.Y+2)
                     {
                         isMove = false;
                     }
@@ -84,7 +102,7 @@ namespace BT_Class
                     }                    
                     break;
                 case ConsoleKey.DownArrow:
-                     if (++ newPoint.Y + birdHeight> maxPoint.Y)
+                     if (++ newPoint.Y + birdHeight> maxPoint.Y-1)
                     {
                         isMove = false;
                     }
@@ -104,6 +122,15 @@ namespace BT_Class
             }
            
             
+        }
+
+        public int GetBirdWeidth()
+        {
+            return birdWedth;
+        }
+        public int GetBirdHeigh()
+        {
+            return birdHeight;
         }
 
         #region Constructor

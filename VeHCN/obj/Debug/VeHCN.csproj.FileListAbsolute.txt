@@ -1,0 +1,6 @@
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\VeHCN\bin\Debug\VeHCN.exe.config
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\VeHCN\obj\Debug\VeHCN.csprojResolveAssemblyReference.cache
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\VeHCN\bin\Debug\VeHCN.exe
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\VeHCN\bin\Debug\VeHCN.pdb
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\VeHCN\obj\Debug\VeHCN.exe
+C:\Users\CongHau\Desktop\Learn_Code\C#\game_FlyingBird\BT_Class\VeHCN\obj\Debug\VeHCN.pdb
