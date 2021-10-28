@@ -8,6 +8,8 @@ namespace BT_Class
 {
     class Map
     {
+        // cmt
+        // Create conflict
         public void createConflict()
         {
             Console.Write("Hậu tạo conflict");
