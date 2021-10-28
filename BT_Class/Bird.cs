@@ -30,8 +30,9 @@ namespace BT_Class
             get { return minPoint; }
             set { minPoint = value; }
         }
-
-        public void XoaChim()
+		
+		// used to delete bird location
+        public void deleteBird()
         {
             Point tempPoint = new Point(currentPoint);
 
@@ -45,10 +46,12 @@ namespace BT_Class
             Console.Write("   "); 
         }
 
-        public void VeChim(Point point)
+		// used to draw the position of the bird
+        // Parameter: bird coordinates
+        public void drawBird(Point point)
         {
             if (currentPoint != null)
-                XoaChim();
+                deleteBird();
 
             currentPoint = new Point(point);
             
@@ -63,8 +66,10 @@ namespace BT_Class
 
             Method.ReturnCurrsor(new Point(0,0));
         }
-
-        public void Moverment(ConsoleKey key)
+		
+		// used to change the position of the bird
+        // Parameter: keyboard shortcuts
+        public void moveMent(ConsoleKey key)
         {
             Point newPoint = new Point(currentPoint);
             bool isMove=true ;
@@ -118,17 +123,17 @@ namespace BT_Class
             }
             if (isMove)
             {
-                VeChim(newPoint);
+                drawBird(newPoint);
             }
            
             
         }
 
-        public int GetBirdWeidth()
+        public int getBirdWeidth()
         {
             return birdWedth;
         }
-        public int GetBirdHeigh()
+        public int getBirdHeigh()
         {
             return birdHeight;
         }
