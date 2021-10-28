@@ -87,6 +87,7 @@ namespace BT_Class
                     else
                     {
                         newPoint.X--;
+                        
                     }
                     break;
                 case 1:
@@ -97,6 +98,7 @@ namespace BT_Class
                     else
                     {
                         newPoint.X++;
+                        
                     }
                     break;
                 case 2:
@@ -107,6 +109,7 @@ namespace BT_Class
                     else
                     {
                         newPoint.Y--;
+                        
                     }
                     break;
                 case 3:
@@ -117,6 +120,7 @@ namespace BT_Class
                     else
                     {
                         newPoint.Y++;
+                        
                     }
                     break;
                 default:
