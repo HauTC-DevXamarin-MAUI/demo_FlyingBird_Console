@@ -10,6 +10,10 @@ namespace BT_Class
     {
         // cmt
         // Create conflict
+        public void createConflict()
+        {
+            Console.Write("Hậu tạo conflict");
+        }
         private Point minPoint, maxPoint;
         internal Point MaxPoint
         {
@@ -47,7 +51,6 @@ namespace BT_Class
                     {
                         Console.Write("|");
                     }
-
                 }
             }
 
