@@ -8,6 +8,10 @@ namespace BT_Class
 {
     class Map
     {
+        public void createConflict()
+        {
+            Console.Write("Hậu tạo conflict");
+        }
         private Point minPoint, maxPoint;
         internal Point MaxPoint
         {
@@ -45,7 +49,6 @@ namespace BT_Class
                     {
                         Console.Write("|");
                     }
-
                 }
             }
 
