@@ -8,6 +8,8 @@ namespace BT_Class
 {
     class Map
     {
+        // cmt
+        // Create conflict
         private Point minPoint, maxPoint;
         internal Point MaxPoint
         {
