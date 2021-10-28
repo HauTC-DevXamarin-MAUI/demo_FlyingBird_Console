@@ -9,7 +9,6 @@ namespace BT_Class
     public class Coin
     {
         private Point currentPoint;
-
         public Point CurrentPoint
         {
             get { return currentPoint; }
@@ -43,12 +42,14 @@ namespace BT_Class
             set { isGotten = value; }
         }
 
-        private int huongDiChuyen = 0; // 0: <- , 1: ^ , 2: -> , 3: v 
+        //Hướng di chuyển của coin
+        private int directionMove = 0; // 0: <- , 1: ^ , 2: -> , 3: v 
 
-        public void VeCoin(Point point)
+        //Hàm vẽ coin
+        public void drawCoin(Point point)
         {
             if (currentPoint != null && !IsGotten)
-                XoaCoin();
+                deleteCoin();
 
             currentPoint = new Point(point);
 
@@ -57,27 +58,27 @@ namespace BT_Class
             Method.ReturnCurrsor(new Point(0, 0));
         }
 
-
-        public void Moverment()
+        //hàm di chuyển auto của Coin
+        public void moverment()
         {
             Random rand = new Random();
             bool isMove = rand.Next(1, 5) % 5 == 0 ? true : false;
 
             if (isMove)
             {
-                huongDiChuyen = rand.Next(0, 4);//[0,3]
+                directionMove = rand.Next(0, 4);//[0,3]
             }
-            DiChuyen();
+            move();
 
 
         }
-        public void DiChuyen()
+        public void move()
         {
             if (currentPoint == null)
                 return;
             Point newPoint = new Point(currentPoint);
             bool isMove = true;
-            switch (huongDiChuyen)
+            switch (directionMove)
             {
                 case 0:
                     if (--newPoint.X < minPoint.X + 2)
@@ -86,8 +87,7 @@ namespace BT_Class
                     }
                     else
                     {
-                        newPoint.X--;
-                        
+                        newPoint.X--;                        
                     }
                     break;
                 case 1:
@@ -97,8 +97,7 @@ namespace BT_Class
                     }
                     else
                     {
-                        newPoint.X++;
-                        
+                        newPoint.X++;                        
                     }
                     break;
                 case 2:
@@ -108,8 +107,7 @@ namespace BT_Class
                     }
                     else
                     {
-                        newPoint.Y--;
-                        
+                        newPoint.Y--;                        
                     }
                     break;
                 case 3:
@@ -129,11 +127,12 @@ namespace BT_Class
             }
             if (isMove)
             {
-                VeCoin(newPoint);
+                drawCoin(newPoint);
             }
         }
 
-        public void XoaCoin()
+        //Hàm xóa coin (Khi Bird cũng tọa độ với coin thì xóa coin đó)
+        public void deleteCoin()
         {
             Point tempPoint = new Point(currentPoint);
 
@@ -142,13 +141,14 @@ namespace BT_Class
             Method.ReturnCurrsor(new Point(0, 0));
 
         }
+
+        //Khởi tạo coin
         public Coin(Point minPoint, Point maxPoint)
         {
             this.MinPoint = minPoint;
             this.MaxPoint = maxPoint;
             IsGotten = true;
-            coinSpeed = 200;
-            
+            coinSpeed = 200;            
         }
     }
 }
